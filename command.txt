@@ -1,0 +1,14 @@
+1. lsblk
+2. df -h
+3. du -sh /mnt/shared/* | sort -rh | head -n 10
+4. find /mnt/shared -type f -size +100M 2>/dev/null
+5. find /mnt/shared -type f -mtime +180 2>/dev/null
+6. find /mnt/shared -type f -user editor1 2>/dev/null
+7. echo "Critical Render Data" > /mnt/shared/original.dat
+8. ln /mnt/shared/original.dat /mnt/shared/hard_link.dat
+9. ln -s /mnt/shared/original.dat /mnt/shared/sym_link.dat
+10. ls -li /mnt/shared/*.dat
+11. rm -f /mnt/shared/original.dat
+12. ls -li /mnt/shared/*.dat
+13. cat /mnt/shared/hard_link.dat
+14. cat /mnt/shared/sym_link.dat
